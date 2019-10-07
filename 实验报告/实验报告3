@@ -1,0 +1,39 @@
+基本数据类型
+实验目的：
+掌握数值运算操作和字符类型转换函数
+实验要求：
+1、掌握Python内置的数值运算和字符函数；
+2、掌握字符串类型及其操作和格式化
+实验内容：
+完成3.1-3.8
+实验代码：
+3.1
+#重量计算
+weight = eval(input('输入你的体重：'))for i in range(10):
+    weight += 0.5print('十年后你在地球上的体重：{:.2f}，你在月球上的体重是：{:.2f}。'.format(weight,weight * 0.165))
+
+3.2
+#天天向上
+abilty = 1for i in range(365//7):
+    for a in range(4):
+        abilty = abilty * 1.01print('连续学习365天后的能力值：{:.2f}'.format(abilty))
+3.4
+#回文数判断
+num = input('请输入一个数字：')if num == num[::-1]:
+    print(num,'是回文数')else:
+    print(num,'不是回文数')
+3.6
+#文本进度条import time
+scale = 10for i in range(scale + 1):
+    a,b = '**' *i,'..' * (scale - i)
+    print('\rStarting' + '{}{}'.format(a,b),end = '')
+    time.sleep(0.1)print('Done')
+3.7
+#文本风格while True:
+    for i in ['/','-','|','\\','|']:
+        print('%s\r' % i ,end = '')
+3.8
+from tqdm import tqdmfrom time import sleepfor i in tqdm(range()):
+    sleep(0.01)
+实验总结：
+通过这次上机，天天向上这个程序给我很深的印象，它告诉我们应该每天都进步。3.1是一个普通的函数运算，换算了地球和月球的重量。通过3.2，我们以学习的不同方式计算出能力值。后面的题目则是一些稀奇古怪的计算问题。在编辑过程中也出现了一些问题，但在老师的提示下知道了转义字符的使用方法。让我对编码有了更深的兴趣。
